@@ -65,6 +65,8 @@ Click Save.
 
 GitHub will now serve the site using the index.html in your dist/ folder.
 
+OR Use the gh-pages method with branching.
+
 🌍 Access Your Live Site
 
 https://<your-username>.github.io/<repo-name>/
