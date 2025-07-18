@@ -10,31 +10,31 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
-  output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    clean: true,
-    publicPath: './', // Ensures correct paths on GitHub Pages
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/template.html',
-      filename: 'index.html',
-    }),
-  ],
-  module: {
-    rules: [
-      {
-        test: /\.css$/i,
+entry: './src/index.js',
+output: {
+filename: '[name].bundle.js',
+path: path.resolve(\_\_dirname, 'dist'),
+clean: true,
+publicPath: './', // Ensures correct paths on GitHub Pages
+},
+plugins: [
+new HtmlWebpackPlugin({
+template: './src/template.html',
+filename: 'index.html',
+}),
+],
+module: {
+rules: [
+{
+test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
-        type: 'asset/resource',
-      },
-    ],
-  },
+type: 'asset/resource',
+},
+],
+},
 };
 
 📦 Build the Project
@@ -84,4 +84,3 @@ Then configure GitHub Pages to serve from main /dist in your repo settings.
 ✅ Optional: Add This File
 
 Save this as DEPLOY.md in your repo to keep a permanent reference.
-

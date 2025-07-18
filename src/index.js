@@ -1,8 +1,7 @@
-import {greeting as msg} from "./greeting";
 import cat from "./cat.jpeg";
-import "./styles.css"
+import "./styles.css";
 
-const image=document.createElement("img");
-image.src= cat;
+const image = document.createElement("img");
+image.src = cat;
 document.body.appendChild(image);
-console.log(msg);
+console.log("workking for now ig");
